@@ -97,6 +97,7 @@
           $('.search .ol .nav-3').slideDown(500);
     }else{
       $('.search .ol .nav-3').slideUp(500);
+      console.log('成中锦');
     }
   })
 })();
