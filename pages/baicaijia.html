@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/baicaijia.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<!--版心-->
+<div id="mmm_container">
+
+  <!--头部导航-->
+  <div class="bcj-top-nav">
+    <ul class="clearfix">
+
+    </ul>
+    <div class="search">
+      <button></button>
+    </div>
+  </div>
+  <!--商品展示-->
+  <div class="goods">
+    <ul>
+      <li class='l-good'>
+        <a href="javascript:;" class="clearfix"></a>
+        <div class="box clearfix">
+          <div class="left fl">
+            <img src="" alt="">
+          </div>
+          <div class="right">
+            <h3><span>[]</span>标题</h3>
+            <p><i>券后</i><em>￥</em>22<del>￥222</del></p>
+            <div class="jindutiao clearfix">
+              <div class="jdt">
+                <i>
+                  <em></em>
+                  <span>70%</span>
+                </i>
+                <b>已领80张</b>
+              </div>
+            </div>
+            <div class="button clearfix">
+              <a href="javascript:;">点此领取15元优惠卷</a>
+              <a href="javascript:;">下载链接</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<script src="../lib/jquery版本/template.js"></script>
+<script src="../javascript/ajax.js"></script>
+<script src="../javascript/headAndFoot.js"></script>
+<script src="../javascript/baicaijia.js"></script>
+
+
+<!--模板-->
+<!--<script type="text/template" id="tmp"></script>-->
+
+<!--头部导航模板-->
+<script type="text/template" id="tmp-topNav">
+{{each list v}}
+<li id="{{ v.titleId}}">
+  <a href="javascript:;">{{v.title}}</a>
+</li>
+  {{/each}}
+</script>
+
+<!--商品模板-->
+<script type="text/template" id="tmp-goods">
+{{each list as v}}
+<li class='l-good'>
+  {{@v.productHref}}
+  <div class="box clearfix">
+    <div class="left fl">
+      {{@v.productImg}}
+    </div>
+    <div class="right">
+      <h3>{{@v.productName}}</h3>
+      <p>{{@v.productPrice}}</p>
+      <div class="jindutiao clearfix">
+        <div class="jdt">
+         {{@v.productCouponRemain}}
+        </div>
+      </div>
+      <div class="button clearfix">
+        {{@v.productCoupon}}
+        {{@v.productHref}}
+      </div>
+    </div>
+  </div>
+</li>
+
+  {{/each}}
+</script>
+
+</body>
+</html>

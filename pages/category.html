@@ -1,0 +1,66 @@
+<!--搜索页面-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/category.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<!--版心-->
+<div id="mmm_container">
+
+  <!--分类导航-->
+  <div class="mmm_main">
+    <ul>
+      <li class="yiji"> 大家电
+        <i class="fr">&gt;</i>
+        <ol class="clearfix">
+          <li><a href="javascript:;">
+            电视
+          </a></li>
+
+        </ol>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+
+<script src='../lib/jquery版本/jquery-1.12.4.min.js'></script>
+<script src='../lib/jquery版本/template.js'></script>
+<script src='../javascript/headAndFoot.js'></script>
+<script src='../javascript/ajax.js'></script>
+<script src='../javascript/category.js'></script>
+
+<!--一级菜单模板-->
+<script type="text/template" id="one-tmp">
+  {{each list as v i}}
+  <li class="yiji" id="{{ i }}">
+
+    <p>{{v.title}}
+      <i class="fr">&gt;</i></p>
+    <ol class="clearfix">
+    </ol>
+  </li>
+  {{ /each }}
+</script>
+<!--二级菜单模板-->
+<script type="text/template" id="two-tmp">
+
+    {{each list v}}
+    <li id='{{v.categoryId}}'>
+      <a href="productlist.html?id={{v.categoryId}}">
+      {{ v.category }}
+    </a></li>
+  {{/each}}
+
+</script>
+</body>
+</html>

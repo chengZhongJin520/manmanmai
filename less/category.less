@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+
+/*屏幕适配 版心 页头 页脚*/
+@import 'adapter';
+
+/*分类导航*/
+.mmm_main{
+  //margin-bottom: 200px;
+  width: 100%;
+  padding:10/50rem ;
+  >ul{
+    background-color: #CCCCCC;
+    //一级菜单
+    >li{
+      cursor:pointer;
+      position:relative;
+      width: 100%;
+      p{
+        .H(80);
+        border-bottom:0.02rem solid #666;
+        padding-left: .8rem;
+        padding-right: 20/50rem;
+        font-size: 0.6rem;
+        line-height:80/50rem;
+        color:#000;
+        //overflow: hidden;
+        i{
+          .W(50);
+          .H(50);
+          font-size: 1rem;
+          line-height: 1rem;
+          margin-top:15/50rem;
+          text-align: center;
+          transform-origin:center center;
+          transition:transform .5s;
+        }
+      }
+    }
+  }
+}
+//二级菜单
+.yiji{
+  ol{
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    li{
+      float:left;
+      width: 33.33%;
+      a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-left:.02rem solid #666;
+        border-bottom:.02rem solid #666;
+        line-height: 80/50rem;
+        font-size: .4rem;
+        color:#000;
+
+        .H(80);
+      }
+    }
+    li:last-child,
+    li:nth-child(3n){
+      a{
+        border-right: .02rem solid #666;
+      }
+    }
+  }
+}
+
+
+.xuanzhuan{
+  i{
+    transform: rotate(90deg);
+  }
+
+}

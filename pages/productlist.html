@@ -1,0 +1,90 @@
+<!--全部分类->电视-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/productlist.css">
+</head>
+<body>
+<!--版心-->
+<div id="mmm_container">
+
+  <!--分类导航-->
+  <div class="mmm_nav clearfix">
+    <!--<a href="index.html">首页 &gt;</a>-->
+    <!--<a href="category.html">全部分类 &gt;</a>-->
+    <!--<a href="javascript:;" id="">电视 &gt;</a>-->
+    <!--<button>筛选</button>-->
+  </div>
+  <!--商品-->
+  <div class="mmm_goods">
+    <ul>
+      <li class="goods">
+        <a href="javascript:;" class="clearfix">
+          <div class="left">
+            <img src="javascript:;" alt="">
+          </div>
+          <div class="right">
+            <div class="title txt-cut">
+              乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视
+            </div>
+            <p>￥1999.00</p>
+            <div class="other clearfix">
+              <span class="fl">乐视 | 报价(6)</span>
+              <span class="fr">评论(2286)</span>
+            </div>
+          </div>
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+  
+</div>
+<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<script src="../lib/jquery版本/template.js"></script>
+<script src="../javascript/ajax.js"></script>
+<script src="../javascript/headAndFoot.js"></script>
+<script src="../javascript/productlist.js"></script>
+
+<!--分类导航模板-->
+<script type="text/template" id="tmp-nav">
+{{each list v}}
+<a href="index.html">首页 &gt;</a>
+<a href="category.html">全部分类 &gt;</a>
+<a href="javascript:;" id="{{v.categoryId}}">
+  {{v.category}} &gt;</a>
+<button>筛选</button>
+{{/each}}
+</script>
+<!--商品模板-->
+<script type="text/template" id="tmp-goods">
+  {{each list v}}
+  <li class="goods" productId="{{v.productId}}" productListId="{{v.productListId}} " _id="{{v._id}}">
+    <a href="product.html?productId={{v.productId}}" class="clearfix">
+      <div class="left">
+        {{@v.productImg}}
+      </div>
+      <div class="right">
+        <div class="title one-txt-cut">
+         {{v.productName}}
+        </div>
+        <p>{{v.productPrice}}</p>
+        <div class="other clearfix">
+          <span class="fl">{{v.brandName}} | {{v.productQuote}}</span>
+          <span class="fr">{{v.productCom}}</span>
+        </div>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/moneyctrl.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<div id="mmm_container">
+  <div class="mmm_search">
+    <ol class="mmm_search_goods"></ol>
+  </div>
+</div>
+
+<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<script src="../lib/jquery版本/jquery.cookie.js"></script>
+<script src="../lib/jquery版本/template.js"></script>
+<script src="../javascript/ajax.js"></script>
+<script src="../javascript/headAndFoot.js"></script>
+<script src="../javascript/moneyctrl.js"></script>
+<!--折扣商品模板-->
+<script id='goods-tmp' type='text/template'>
+  {{each list  v}}
+  <li>
+    <a href="moneyctrlproduct.html?id={{v.productId}}" class='clearfix'>
+      <div class="left fl">
+        {{@v.productImgSm}}
+      </div>
+      <div class="right">
+        <div class="tit">
+          <p class='one-txt-cut'>{{v.productName}}
+            <span>{{v.productPinkage}}</span></p>
+        </div>
+        <div class="bottom clearfix">
+          <span>
+            {{v.productFrom}} |
+            {{v.productTime}}</span>
+          <span> <i></i> {{v.productComCount}}</span>
+        </div>
+      </div>
+
+    </a>
+  </li>
+  {{/each}}
+</script>
+</body>
+</html>

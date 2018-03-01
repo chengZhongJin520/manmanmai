@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/moneyctrlproduct.css">
+  <link rel="icon" href="favicon.ico">
+
+</head>
+<body>
+<div id="mmm_container">
+  <!--商品详情-->
+  <div class="mmm_info">
+    <!--<div class="goods-info">-->
+      <!--<h3>h4标题</h3>-->
+      <!--<div class="info">-->
+        <!--<span>京东商城</span>-->
+        <!--<span>10-25 14:10</span>-->
+        <!--<span>小编烟火 / 慢慢买</span>-->
+      <!--</div>-->
+      <!--<div class="content">-->
+        <!--<div class="smollImg">-->
+          <!--<img src="" alt="">-->
+        <!--</div>-->
+        <!--<div class="conn">-->
+          <!--<p>海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。</p>-->
+          <!--<p>目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L。</p>-->
+
+        <!--</div>-->
+        <!--<div class="bigImg">-->
+          <!--<img src="" alt="">-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="ul">-->
+      <!--<ul>-->
+        <!--<li>-->
+          <!--<a href="javascript:;">-->
+            <!--<span>-->
+              <!--北京-->
+              <!--<strong>-->
+                <!--有货-->
+              <!--</strong>-->
+            <!--</span>-->
+          <!--</a>-->
+        <!--</li>-->
+      <!--</ul>-->
+      <!--<div class="golink">-->
+        <!--<a href="javascript:;">前往购买</a>-->
+      <!--</div>-->
+
+    <!--</div>-->
+  </div>
+  <!--二维码-->
+  <div class="erweima">
+    <img src="images/mmbweixin2.png" alt="">
+  </div>
+  <!--评论-->
+  <div class="comment">
+    <!--<div class="com-tit">发表评论</div>-->
+    <!--<form action="#">-->
+      <!--<textarea name="" id="" cols="30" rows="10"></textarea>-->
+      <!--<div class="btn clearfix">-->
+        <!--<input type="button" class="button " value="发表评论">-->
+      <!--</div>-->
+    <!--</form>-->
+    <!--<div class="com-tit ">最新评论</div>-->
+    <!--<ul>-->
+      <!--&lt;!&ndash;<li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="img">&ndash;&gt;-->
+          <!--&lt;!&ndash;<img src="" alt="">&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="com-info">&ndash;&gt;-->
+          <!--&lt;!&ndash;<p>赶鸭子上架 <span class='fr'>time</span></p>&ndash;&gt;-->
+          <!--&lt;!&ndash;<p> 便宜</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;</li>&ndash;&gt;-->
+    <!--</ul>-->
+  </div>
+</div>
+
+
+<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<script src="../lib/jquery版本/template.js"></script>
+<script src="../javascript/ajax.js"></script>
+<script src="../javascript/headAndFoot.js"></script>
+<script src="../javascript/moneyctrlproduct.js"></script>
+
+<!--详情模板-->
+<script type="text/template" id="tmp-info">
+{{each list as v}}
+<div class="goods-info">
+  <h3>{{v.productName}}</h3>
+  <div class="info">
+    <span>{{v.productFrom}}</span>
+    <span>{{v.productTime}}</span>
+    <span>{{v.productTips}}</span>
+  </div>
+  <div class="content">
+    <div class="smollImg">
+      {{@v.productImg2}}
+    </div>
+    <div class="conn">
+      <p>{{v.productInfo}}</p>
+      <p>{{v.productInfo1}}</p>
+
+    </div>
+    <div class="bigImg">
+      {{@v.productImgSm}}
+    </div>
+  </div>
+</div>
+<div class="ul">
+  {{@v.productCity}}
+  <div class="golink">
+    <a href="javascript:;">前往购买</a>
+  </div>
+
+</div>
+  {{/each}}
+</script>
+<!--评论模板-->
+<script type="text/template" id="tmp-com">
+{{each list as v}}
+  {{@v.productComment}}
+  {{/each}}
+
+</script>
+</body>
+</html>

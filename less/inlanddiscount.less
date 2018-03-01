@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+//引用公共样式 属性
+@import "adapter";
+
+/*商品*/
+.goods,ul{
+  width: 100%;
+}
+
+li{
+  width: 50%;
+  box-sizing: border-box;
+  float:left;
+  background-color: #fff;
+  border-left:.02rem solid #ccc;
+  border-bottom:.02rem solid #ccc;
+  a{
+    display: block;
+    width: 100%;
+    padding:10/50rem;
+    .topImg{
+      width: 100%;
+      .H(200);
+      margin:20/50rem 0;
+      img{
+        display: block;
+        margin:0 auto;
+        height:100%;
+        .W(200)
+      }
+    }
+    .info{
+      padding:20/50rem;
+      h3{
+        .H(75);
+        color:#000;
+        font-size: 20/50rem;
+        margin-bottom:.2rem;
+      }
+      p{
+        color:@mmmbgc;
+        font-size: 16/50rem;
+      }
+      .time{
+        font-size: 16/50rem;
+      }
+    }
+  }
+
+}
+li:nth-child(2n){
+border-right:.02rem solid #ccc;
+}
+li:nth-child(-n+2){
+  border-top:.02rem solid #ccc;
+}

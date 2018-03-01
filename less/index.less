@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+
+/*屏幕适配 版心 页头 页脚 变量 方法*/
+@import 'adapter';
+
+
+/*主页导航*/
+.mmm_top_nav{
+  width: 100%;
+  ul{
+    .padding-t(20);
+  }
+  li{
+    float:left;
+    width: 25%;
+    a{
+      display: block;
+      .padding-t(7.2);
+      .padding-b(7.2);
+    }
+    img{
+      .W(70);
+      margin:0 auto;
+    }
+    p{
+      text-align:center;
+      .margin-t(7.2);
+      .margin-b(7.2);
+      color:black;
+    }
+  }
+}
+
+
+/*主页折扣商品*/
+.mmm_hot,/*品牌排行*/
+.mmm_search_title{
+    .padding-l(20);
+    .padding-r(20);
+    .H(68);
+    background-image:linear-gradient( #ffaf47     ,#ff9000) ;
+    span{
+      font-size:24/50rem;
+      display:inline-block;
+      //height: 100%;
+      color:white;
+      line-height:68/50rem;
+    }
+    a{
+      .W(40);
+      .H(40);
+      .margin-t(14);
+    }
+  }
+
+.mmm_search_goods{
+  //.padding-l(7.2);
+  li{
+    border-bottom:1/50rem solid #ccc;
+    .padding-l(19.2);
+    .padding-r(12);
+    .padding-t(26);
+    .padding-b(26);
+    background-color: #fff;
+    .left{
+      .W(144);
+      .H(144);
+    }
+    .right{
+      overflow: hidden;
+      .H(144);
+      position:relative;
+      .tit{
+        p{
+          color:black;
+          font-size: 18/50rem;
+        }
+        span{
+          color:@mmmbgc;
+        }
+      }
+      .bottom{
+        position:absolute;
+        width: 100%;
+        bottom:0;
+        span:last-child{
+          float:right;
+          i{
+            float:left;
+            width: 20px;
+            height: 20px;
+            background:url(../pages/images/comment.svg) no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+  /*更多优惠按钮*/
+.mmm_more{
+  width: 100%;
+  .H(106);
+  .padding-t(20);
+  button{
+    cursor:pointer;
+    display: block;
+    .W(710);
+    .H(64);
+   margin:0 auto;
+    border-radius:0.1rem  ;
+    font-size: 0.4rem;
+    background-image: linear-gradient(#ccc, #999);
+  }
+}
+
+
+
+/*移动版块*/
+.mmm_animation{
+  transform:translateY(-2.5rem);
+  transition:transform .5s ;
+}
+.animation{
+  transform:none;
+}

@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+//公共样式 属性
+@import "adapter";
+
+.mmm_info{
+  padding:5/50rem 10/50rem;
+  background-color: #fff;
+  h3{
+    font-size: 30/50rem;
+  }
+  .info{
+    padding:.4rem 0;
+  }
+  .content{
+    font-size: 16/50rem;
+    p{
+      margin:5/50rem 0;
+    }
+    .smollImg{
+      float:right;
+      //background-color: green;
+      .margin-l(10);
+      img{
+        .W(120);
+        .H(120);
+      }
+    }
+    .bigImg{
+      margin:.1rem 0;
+      img{
+        .W(350);
+        .H(350);
+
+      }
+      padding-bottom:20/50rem;
+    }
+  }
+  .ul{
+    ul{
+      .W(200);
+      //.H(100);
+      //background-color: #2d2d2d;
+      border-radius: 5/50rem ;
+      box-shadow:0.02rem 0.02rem 0.02rem 0.02rem #ccc;
+      margin:0 auto;
+      border-left:.02rem dashed #ccc;
+      border-right:.02rem dashed #ccc;
+      .padding-l(10);
+      .padding-r(10);
+      a{
+        display: block;
+        width: 100%;
+        border-bottom:.02rem dashed #ccc;
+        .padding-l(10);
+        .padding-r(10);
+        font-size: .32rem;
+        color:#000;
+        strong{
+          float:right;
+          color:@mmmbgc;
+        }
+      }
+    }
+    .golink{
+     margin:.3rem .2rem ;
+      a{
+        display: block;
+        width: 100%;
+        font-size: .3rem;
+        color:#fff;
+        text-align: center;
+        line-height: .6rem;
+        background-color: @mmmbgc;
+        border-radius: .1rem;
+      }
+    }
+  }
+}
+
+/*评论*/
+.comment{
+  padding:10/50rem;
+    li{
+      border-bottom:.02rem solid #ccc;
+      padding:18/50rem 10/50rem;
+      .userimg{
+        .W(60);
+        .H(60);
+        float:left;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .con{
+        padding-left:10/50rem;
+        overflow: hidden;
+        .username{
+          color:blue;
+          float:left;
+        }
+        .time{
+          float:right;
+          color:#777;
+        }
+        .content{
+          padding-top:.6rem;
+          font-size: 16/50rem;
+        }
+      }
+      //.com-info{
+      //  margin-left:10/50rem;
+      //  overflow: hidden;
+      //  p:first-child{
+      //    color:blue;
+      //    span{
+      //      float:right;
+      //      color:#777;
+      //    }
+      //  }
+      //}
+    }
+
+}
+.tit{
+  padding:10/50rem 2/50rem;
+  font-size: .4rem;
+}
+.form{
+  border:.02rem solid #ccc;
+  padding:.1rem;
+  textarea{
+    width: 100%;
+    .H(200)
+  }
+  .ctrl{
+    border-top:.02rem solid #ccc;
+    .H(40);
+    input{
+      float:right;
+      padding:10/50rem;
+      background-color: @mmmbgc;
+      font-size: .34rem;
+      color:#fff;
+    }
+  }
+}

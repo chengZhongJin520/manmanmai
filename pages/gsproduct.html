@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/gsproduct.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<!--版心-->
+<div id="mmm_container">
+
+  <!--筛选-->
+<div class="search clearfix">
+  <div class="sc fr">
+    <i></i>
+  </div>
+  <ul class='clearfix'>
+    <li>京东 <span></span></li>
+    <li>华北 <span></span></li>
+    <li>全部 <span></span></li>
+  </ul>
+  <div class="ol">
+    <ol class='nav-3'>
+      <li>全部价格 <span>√</span></li>
+    </ol >
+  </div>
+
+</div>
+  <!--商品-->
+  <div class="goods">
+    <ul>
+      <li>
+        <div class="img"><img src="" alt=""></div>
+        <div class="info one-txt-cut"></div>
+        <div class="other clearfix">
+          <span>价格</span>
+          <a href="javascript:;">去凑单</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<script src="../lib/jquery版本/template.js"></script>
+<script src="../javascript/ajax.js"></script>
+<script src="../javascript/headAndFoot.js"></script>
+<script src="../javascript/gsproduct.js"></script>
+
+
+<!--模板-->
+<script type="text/template" id="tmp"></script>
+
+
+<!--商品模板-->
+<script type="text/template" id="tmp-goods">
+{{each list v}}
+  <li id='{{ v.productId}}'>
+    <div class="img"><img src="{{v.productImg}}" alt=""></div>
+    <div class="info one-txt-cut">
+      {{v.productName}}
+    </div>
+    <div class="other clearfix">
+      <span>{{v.productPrice}}</span>
+      <a href="javascript:;">去凑单</a>
+    </div>
+  </li>
+  {{/each}}
+</script>
+
+
+<!--导航1模板-->
+<script type="text/template" id="tmp-nav1">
+  <ol class='nav-1'>
+  {{each result as v i}}
+  <li id="{{v.shopId}}">{{v.shopName}} <span></span></li>
+{{/each}}
+    </ol >
+</script>
+
+<!--导航2模板-->
+<script type="text/template" id="tmp-nav2">
+  <ol class='nav-2'>
+    {{each result as v i}}
+    <li id="{{v.areaId}}">{{v.areaName}} <span></span></li>
+    {{/each}}
+  </ol >
+</script>
+
+<!--导航3模板-->
+<script type="text/template" id="tmp-nav3">
+
+</script>
+</body>
+</html>

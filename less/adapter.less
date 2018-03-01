@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+.adapter(@screenWidth:750px){
+  @media (min-width:@screenWidth){
+    html{
+      font-size: round(@screenWidth/15,2);
+    }
+  }
+}
+.adapter(320px);
+.adapter(330px);
+.adapter(340px);
+.adapter(350px);
+.adapter(360px);
+.adapter(375px);
+.adapter(384px);
+.adapter(390px);
+.adapter(400px);
+.adapter(414px);
+.adapter(424px);
+.adapter(434px);
+.adapter(444px);
+.adapter(454px);
+.adapter(464px);
+.adapter(474px);
+.adapter(480px);
+.adapter(540px);
+.adapter(550px);
+.adapter(560px);
+.adapter(570px);
+.adapter(580px);
+.adapter(590px);
+.adapter(600px);
+.adapter(610px);
+.adapter(620px);
+.adapter(630px);
+.adapter(640px);
+.adapter(650px);
+.adapter(660px);
+.adapter(670px);
+.adapter(680px);
+.adapter(690px);
+.adapter(700px);
+.adapter(710px);
+.adapter(720px);
+.adapter(730px);
+.adapter(740px);
+.adapter(750px);
+
+/*版心*/
+@import "containerBase";
+/*页头*/
+@import "headerBase";
+/*页脚*/
+@import "footerBase";
+
+/*变量 方法*/
+@import "variable";
+
+//分页按钮
+/*按钮*/
+.mmm_button{
+  width: 100%;
+  box-sizing: content-box;
+  padding:.4rem 0;
+  background-color: #fff;
+  span{
+    float:left;
+    width: 33.33%;
+    a{
+      display: block;
+      .W(174);
+      .H(44);
+      margin:0 auto;
+      text-align:center;
+      color:#000;
+      line-height: 44/50rem;
+      font-size: .35rem;
+      border-radius:.07rem;
+      background-image:linear-gradient(#f1f1f1,#d4d4d4);
+    }
+    select{
+      box-sizing: content-box;
+      padding:8/50rem 15/50rem;
+      font-size: .32rem;
+      display: block;
+      margin:0 auto;
+      option{
+        padding:0;
+      }
+    }
+
+  }
+}

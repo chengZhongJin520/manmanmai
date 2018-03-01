@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Title</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/inlanddiscount.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<div id="mmm_container" >
+  <!--商品-->
+  <div class="goods">
+    <ul class="clearfix">
+
+    </ul>
+  </div>
+</div>
+
+<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<script src="../lib/jquery版本/template.js"></script>
+<script src="../javascript/ajax.js"></script>
+<script src="../javascript/headAndFoot.js"></script>
+<script src="../javascript/inlanddiscount.js"></script>
+
+<!--商品模板-->
+<script type="text/template" id='tmp'>
+{{each list as v}}
+<li>
+  <a href="discountproduct.html?id={{v.productId}}">
+    <div class="topImg">
+      {{@v.productImg}}
+    </div>
+    <div class="info">
+      <h3 class="one-txt-cut ">{{v.productName}}</h3>
+      <p class="one-txt-cut ">{{v.productPrice}}</p>
+      <div class="time">
+        <span>{{v.productTime}}</span>
+        <span>{{v.productTime}}</span>
+      </div>
+    </div>
+  </a>
+</li>
+  {{/each}}
+</script>
+</body>
+</html>

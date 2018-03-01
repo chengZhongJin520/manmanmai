@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/moneyctrlproduct.css">
+  <link rel="icon" href="favicon.ico">
+
+</head>
+<body>
+<div id="mmm_container">
+  <!--商品详情-->
+  <div class="mmm_info">
+
+  </div>
+  <!--二维码-->
+  <div class="erweima">
+    <img src="images/mmbweixin2.png" alt="">
+  </div>
+  <!--评论-->
+  <div class="comment">
+  </div>
+</div>
+
+
+<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<script src="../lib/jquery版本/template.js"></script>
+<script src="../javascript/ajax.js"></script>
+<script src="../javascript/headAndFoot.js"></script>
+<script src="../javascript/discountproduct.js"></script>
+
+<!--详情模板-->
+<script type="text/template" id="tmp-info">
+{{each list as v}}
+<div class="goods-info">
+  <h3>{{v.productName}}</h3>
+  <div class="info" style="color:#ff841d;font-weight: 700;font-size: 0.4rem;">
+{{v.productPrice}}
+  </div>
+  <div class="content">
+    <div class="smollImg">
+      {{@v.productImg}}
+    </div>
+    <div class="conn">
+      <p> <span>{{v.productFrom}}</span>
+        <span>{{v.productTime}}</span>
+        <span>{{v.productTips}}</span></p>
+    </div>
+    <div class="bigImg">
+      {{@v.productImg}}
+    </div>
+  </div>
+</div>
+<div class="ul">
+  <div class="data">
+    {{v.productInfo}}
+  </div>
+  <div class="golink">
+    <a href="javascript:;">前往购买</a>
+  </div>
+
+</div>
+  {{/each}}
+</script>
+<!--评论模板-->
+<script type="text/template" id="tmp-com">
+{{each list as v}}
+  {{@v.productComment}}
+  {{/each}}
+
+</script>
+</body>
+</html>

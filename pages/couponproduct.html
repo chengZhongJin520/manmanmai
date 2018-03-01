@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/couponproduct.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<!--版心-->
+<div id="mmm_container">
+  <!--优惠券-->
+  <div class="comment">
+    <div class="title">
+      --点餐前出示手机中的优惠券，即可享受优惠--
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:;" class="clearfix">
+          <div class="left">
+            <img src="" alt="">
+          </div>
+          <div class="right">
+            <p>内容</p>
+            <p>钱</p>
+            <p>有效期</p>
+
+          </div>
+          <i></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!--模态框-->
+  <div class="modal">
+    <div class="img">
+      <ul class='clearfix'>
+
+      </ul>
+
+    </div>
+    <div class="btn clearfix">
+      <button class='fl pre'>&lt;</button>
+      <button class='fr next'>&gt;</button>
+    </div>
+    <div class="back">
+      <button>返回</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<script src="../lib/jquery版本/template.js"></script>
+<script src="../javascript/ajax.js"></script>
+<script src="../javascript/headAndFoot.js"></script>
+<script src="../javascript/couponproduct.js"></script>
+
+
+<!--模板-->
+<script type="text/template" id="tmp">
+{{each list as v}}
+<li id='{{v.couponProductId}}'>
+  <a href="javascript:;" class="clearfix">
+    <div class="left" >
+      {{@v.couponProductImg}}
+    </div>
+    <div class="right">
+      <p class='one-txt-cut'>{{v.couponProductName}}</p>
+      <p>{{v.couponProductPrice}}</p>
+      <p>{{v.couponProductTime}}</p>
+
+    </div>
+    <i></i>
+  </a>
+</li>
+  {{/each}}
+</script>
+</body>
+</html>

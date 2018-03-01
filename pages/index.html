@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <div class="mmm_container" id='mmm_container'>
+    <!--主页页头-->
+    <!--<header class='clearfix mmm_header' id="mmm_header">-->
+      <!--<div class="logo fl">-->
+        <!--<a href="javascript:;">-->
+          <!--<img src="images/header_logo.png" alt="">-->
+          <!--&lt;!&ndash;&lt;&ndash;&gt;-->
+        <!--</a>-->
+      <!--</div>-->
+
+      <!--<div class="appdown fr">-->
+        <!--<a href="javascript:;">-->
+          <!--<img src="images/header_app.png" alt="">-->
+        <!--</a>-->
+      <!--</div>-->
+      <!--<div class="span">-->
+        <!--&lt;!&ndash;<span>你好</span>&ndash;&gt;-->
+      <!--</div>-->
+
+    <!--</header>-->
+    <!--主页搜索-->
+    <section id='mmm_section' >
+      <form action="#" class='clearfix'>
+
+        <input type="text" placeholder="请输入你想浏览的商品">
+        <input type="button" value="搜索" >
+        <!--<button class='fr'>搜索</button>-->
+
+      </form>
+
+    </section>
+    <!--主页导航-->
+    <nav class='mmm_top_nav'>
+      <ul class='clearfix'>
+
+      </ul>
+    </nav>
+
+    <!--移动版块-->
+    <div class="mmm_animation">
+      <!--主页折扣商品-->
+      <div class="mmm_search">
+        <div class="mmm_search_title clearfix">
+          <span>折扣商品推荐</span>
+          <a href="javascript:;" class='fr'>
+            <img src="images/more.png" alt="">
+          </a>
+        </div>
+        <ol class='mmm_search_goods'>
+          <!--<li >-->
+            <!--<a href="javascript:;" class='clearfix'>-->
+              <!--<div class="left fl">-->
+                <!--<img src="" alt="">-->
+              <!--</div>-->
+              <!--<div class="right">-->
+                <!--<div class="tit">-->
+                  <!--<p>移动端凑单品：海天 鲜味 生抽 1.28L <span>10.9元</span></p>-->
+                <!--</div>-->
+                <!--<div class="bottom clearfix">-->
+                  <!--<span>京东商城 | 10-25 14:10</span>-->
+                  <!--<span> <i></i> 有1人评论</span>-->
+                <!--</div>-->
+              <!--</div>-->
+
+            <!--</a>-->
+          <!--</li>-->
+        </ol>
+        <!--更多优惠按钮-->
+        <div class="mmm_more">
+          <button>更多优惠信息&gt;&gt;</button>
+        </div>
+      </div>
+
+      <!--品牌排行-->
+      <div class="mmm_hot">
+        <span>品牌排行</span>
+        <a href="javascript:;" class='fr'>
+          <img src="images/more.png" alt="">
+        </a>
+      </div>
+
+      <!-- 页脚 -->
+      <!--<footer id="mmm_footer">-->
+        <!--<ul class="clearfix">-->
+          <!--<li class="fl">-->
+            <!--<a href="javascript:;">注册</a>-->
+          <!--</li>-->
+          <!--<li class="fl">-->
+            <!--<a href="javascript:;">登录</a>-->
+          <!--</li>-->
+          <!--<li class="fl">-->
+            <!--<a href="javascript:;">返回顶部</a>-->
+          <!--</li>-->
+        <!--</ul>-->
+        <!--<p>-->
+          <!--<a href="javascript:;">手机APP下载</a>-->
+          <!--<a href="javascript:;">慢慢买手机版</a>-->
+          <!--<a href="javascript:;">&#45;&#45;掌上比价平台</a>-->
+        <!--</p>-->
+        <!--<p>m.manmanbuy.com</p>-->
+
+      <!--</footer>-->
+    </div>
+  </div>
+
+  <!--模板-->
+
+  <script src='../lib/jquery版本/jquery-1.12.4.min.js'></script>
+  <script src='../lib/jquery版本/template.js'></script>
+  <script src='../javascript/ajax.js'></script>
+  <script src="../javascript/headAndFoot.js"></script>
+  <script src='../javascript/index.js'></script>
+
+
+
+  <!--主页导航模板-->
+  <script id="nav-tmp" type="text/template">
+
+    {{each list v i}}
+    <li id='{{ i }}'>
+      <a href="{{ v.titlehref}}">
+        {{@v.img}}
+        <p>{{ v.name }}</p>
+      </a>
+    </li>
+    {{/each}}
+
+  </script>
+  <!--折扣商品模板-->
+  <script id='goods-tmp' type='text/template'>
+    {{each list  v}}
+    <li>
+    <a href="javascript:;" class='clearfix'>
+      <div class="left fl">
+        {{@v.productImgSm}}
+      </div>
+      <div class="right">
+        <div class="tit">
+          <p class='one-txt-cut'>{{v.productName}}
+            <span>{{v.productPinkage}}</span></p>
+        </div>
+        <div class="bottom clearfix">
+          <span>
+            {{v.productFrom}} |
+            {{v.productTime}}</span>
+          <span> <i></i> {{v.productComCount}}</span>
+        </div>
+      </div>
+
+    </a>
+    </li>
+    {{/each}}
+  </script>
+
+  <script>
+
+  </script>
+</body>
+</html>

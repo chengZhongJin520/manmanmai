@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+//公共头部、尾部、方法、变量、版心
+@import "adapter";
+
+/*导航*/
+.mmm_nav{
+  .padding-l(20);
+  .padding-r(20);
+  .H(74);
+  border-bottom:.02rem solid #666;
+  border-top:.02rem solid #666;
+  background-image:linear-gradient(#fff,#ccc) ;
+  color:#000;
+  a{
+    float:left;
+    color:#000;
+    line-height:74/50rem ;
+    height: 100%;
+    font-size: 20/50rem;
+  }
+  button{
+    float:right;
+    .W(80);
+    .H(34);
+    border-radius:.1rem;
+    .margin-t(20);
+    background-image:linear-gradient(#d7d7d7,#f5f5f5) ;
+    box-shadow: 1px 1px 1px 1px #999;
+    cursor: pointer;
+  }
+}
+
+
+
+/*商品*/
+.mmm_goods{
+  li{
+    width: 100%;
+    //.H(236);
+    border-bottom:.02rem solid #666;
+    background-color: #fff;
+  }
+}
+.goods{
+  .left{
+    float:left;
+    .W(240);
+    .H(236);
+    padding:20/50rem;
+    //background-color:green;
+    img{
+      .W(172);
+      .H(172);
+    }
+  }
+  .right{
+    //background-color: red;
+    .H(236);
+    overflow: hidden;
+    padding:.4rem .2rem;
+    position:relative;
+  }
+}
+.right{
+  .title{
+    font-size: .35rem;
+    color:#000;
+  }
+  p{
+    position:absolute;
+    top: 50%;
+    font-size: .35rem;
+    transform:translateY(-50%);
+    color:red;
+  }
+  .other{
+    position:absolute;
+    bottom: .4rem;
+    width: 100%;
+    .padding-r(20);
+    max-width: 500px;
+    min-width: 240px;
+    overflow: hidden;
+  }
+}
+

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+//引入公共样式 属性
+@import "adapter";
+
+/*折扣商品*/
+.mmm_search_goods{
+  //.padding-l(7.2);
+  li{
+    border-bottom:1/50rem solid #ccc;
+    .padding-l(19.2);
+    .padding-r(12);
+    .padding-t(26);
+    .padding-b(26);
+    background-color: #fff;
+    .left{
+      .W(144);
+      .H(144);
+    }
+    .right{
+      overflow: hidden;
+      .H(144);
+      position:relative;
+      .tit{
+        p{
+          color:black;
+          font-size: 18/50rem;
+        }
+        span{
+          color:@mmmbgc;
+        }
+      }
+      .bottom{
+        position:absolute;
+        width: 100%;
+        bottom:0;
+        span:last-child{
+          float:right;
+          i{
+            float:left;
+            width: 20px;
+            height: 20px;
+            background:url(../pages/images/comment.svg) no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
