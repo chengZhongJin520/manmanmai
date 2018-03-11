@@ -25,8 +25,10 @@
     <li>全部 <span></span></li>
   </ul>
   <div class="ol">
+    <ol class="nav-1"></ol>
+    <ol class="nav-2"></ol>
     <ol class='nav-3'>
-      <li>全部价格 <span>√</span></li>
+      <li class='gou'>全部价格</li>
     </ol >
   </div>
 
@@ -48,6 +50,7 @@
 
 
 <script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<script src="../lib/jquery版本/jquery.cookie.js"></script>
 <script src="../lib/jquery版本/template.js"></script>
 <script src="../javascript/ajax.js"></script>
 <script src="../javascript/headAndFoot.js"></script>
@@ -77,20 +80,16 @@
 
 <!--导航1模板-->
 <script type="text/template" id="tmp-nav1">
-  <ol class='nav-1'>
   {{each result as v i}}
   <li id="{{v.shopId}}">{{v.shopName}} <span></span></li>
 {{/each}}
-    </ol >
 </script>
 
 <!--导航2模板-->
 <script type="text/template" id="tmp-nav2">
-  <ol class='nav-2'>
     {{each result as v i}}
     <li id="{{v.areaId}}">{{v.areaName}} <span></span></li>
     {{/each}}
-  </ol >
 </script>
 
 <!--导航3模板-->

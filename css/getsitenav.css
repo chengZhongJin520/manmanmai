@@ -347,139 +347,31 @@
 .mmm_button span select option {
   padding: 0;
 }
-/*筛选*/
-.search {
-  width: 100%;
-  position: relative;
-  height: 1rem;
-}
-.search * {
-  box-sizing: border-box;
-}
-.search .sc {
-  width: 1rem;
-  height: 1rem;
-  border: 0.02rem solid #cccccc;
-}
-.search .sc i {
-  display: block;
-  width: 50%;
-  height: 50%;
-  margin: 25% auto;
-  background: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='17' height='17'><path fill='#565656' d='M978.261333 430.321067c0 157.2864-127.488 284.808533-284.8768 284.808533-157.218133 0-284.706133-127.488-284.706133-284.808533s127.488-284.7744 284.706133-284.7744c22.254933 0 43.793067 2.798933 64.648533 7.68l63.2832-192.136533c3.208533-9.352533 14.916267-14.062933 26.248533-10.410667 11.298133 3.720533 17.8176 14.5408 14.848 23.8592l-63.249067 191.488C904.055467 208.078933 978.261333 310.4448 978.261333 430.321067zM693.384533 184.834133c-135.5776 0-245.384533 109.909333-245.384533 245.521067 0 135.611733 109.943467 245.486933 245.384533 245.486933 135.68 0 245.521067-109.909333 245.521067-245.486933C938.939733 294.7776 829.064533 184.834133 693.384533 184.834133zM366.4896 683.863467l-18.261333 0L98.6112 683.863467c-12.049067 0-21.8112-9.762133-21.8112-21.777067 0-12.049067 9.762133-21.8112 21.8112-21.8112l249.617067 0 5.461333 0c9.147733 15.189333 19.114667 29.832533 30.139733 43.588267L366.4896 683.863467zM297.7792 457.866667 277.6064 457.866667 98.6112 457.866667c-12.049067 0-21.8112-9.762133-21.8112-21.777067 0-12.0832 9.762133-21.8112 21.8112-21.8112l176.708267 0c0 0 0 0 0 0.034133l22.459733 0c-0.4096 7.236267-1.092267 14.404267-1.092267 21.777067S297.3696 450.6304 297.7792 457.866667zM348.2624 231.869867 326.3488 231.869867 98.6112 231.869867c-12.049067 0-21.8112-9.659733-21.8112-21.8112 0-12.0832 9.762133-21.742933 21.8112-21.742933l249.617067 0 5.973333 0 12.288 0 17.339733 0c-11.025067 13.755733-20.923733 28.3648-30.071467 43.52L348.2624 231.835733zM605.3888 5.975467l-127.0784 0-122.538667 0L337.544533 5.975467 87.927467 5.975467c-12.049067 0-21.8112-9.762133-21.8112-21.845333 0-12.0832 9.762133-21.879467 21.8112-21.879467l249.617067 0 18.261333 0 122.538667 0 127.044267 0 78.711467 0-16.0768 43.6224L605.3888 5.975467z' transform='translate(0, 812) scale(1, -1)'/></svg>") center no-repeat;
-  background-size: 100%;
-}
-.search ul {
-  overflow: hidden;
-  background-color: #fff;
-  border: 0.02rem solid #cccccc;
-  height: 100%;
-}
-.search ul li {
-  height: 100%;
-  float: left;
-  width: 33.33%;
-  text-align: center;
-  font-size: 0.4rem;
-  line-height: 1rem;
-  cursor: pointer;
-}
-.search ul li span {
-  margin-top: 0.16rem;
-  vertical-align: text-bottom;
-  display: inline-block;
-  width: 0.4rem;
-  height: 0.4rem;
-  line-height: 0.4rem;
-  background: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='17' height='17'><path fill='#565656' d='M277.44 194.72 528.213333 445.386667 778.88 194.72Z' transform='translate(0, 812) scale(1, -1)'/></svg>") center no-repeat;
-  background-size: 100%;
-}
-.search .ol {
-  position: absolute;
-  width: 100%;
-  top: 1rem;
-}
-.search .ol ol {
-  display: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
+.nav {
   background-color: #fff;
 }
-.search .ol ol li {
-  position: relative;
-  cursor: pointer;
-  height: 1rem;
-  width: 100%;
-  font-size: 0.4rem;
-  line-height: 1rem;
-  border: 0.02rem solid #cccccc;
-  padding-left: 1rem;
-}
-.goods {
-  padding: 0.2rem;
-}
-.goods ul * {
-  box-sizing: border-box;
-}
-.goods ul li {
-  background-color: #fff;
-  margin-bottom: 0.2rem;
-  float: left;
-  width: 49%;
-}
-.goods ul li img {
-  width: 3.48rem;
-  height: 3.48rem;
+.nav ul {
+  width: 300px;
   margin: 0 auto;
+  padding-bottom: 0.7rem;
 }
-.goods ul li .img {
-  margin-bottom: 0.2rem;
+.nav ul li {
+  float: left;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  margin: 0 0 5px 5px;
+  vertical-align: middle;
 }
-.goods ul li .info {
-  padding: 0.1rem 0;
-  padding-left: 0.2rem;
+.nav ul li a {
+  display: block;
+  padding: 10px 8px;
+  font-size: 16px;
+  color: #000;
 }
-.goods ul li .other span {
-  font-size: 0.6rem;
-  line-height: .8rem;
-  color: #ff841d;
-}
-.goods ul li .other a {
-  float: right;
-  padding: 0.2rem;
-  background-color: #ff841d;
-  color: #fff;
-  border-radius: .1rem;
-}
-.goods ul li:nth-child(odd) {
-  margin-right: 0.2rem;
-}
-.nav-1 {
-  z-index: 1;
-}
-.nav-2 {
-  z-index: 2;
-}
-.three {
-  z-index: 3;
-}
-.three span {
-  position: absolute;
-  right: 0;
-  height: 100%;
-  width: 1rem;
-  color: #ff841d;
-  font-size: 0.4rem;
-  line-height: 1rem;
-}
-.gou:after {
-  position: absolute;
-  content: '';
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  right: 0;
-  background: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='20' height='20'><path fill='#ff4400' d='M959.94666 564.447904 899.86426 624.530304 370.356514 95.046095 124.134717 341.268916 64.052317 281.187539 361.641015-16.402183 370.051569-24.529281 379.068943-16.402183Z' transform='translate(0, 812) scale(1, -1)'/></svg>") no-repeat center;
-  background-size: 50%;
+.nav ul li a img {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
 }

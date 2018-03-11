@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买：品牌大全</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/brandTitle.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<!--版心-->
+<div id="mmm_container">
+  <!--导航-->
+  <div class="mmm_nav clearfix">
+    <a href="index.html">首页 &gt;</a>
+    <a href="category.html">全部分类 &gt;</a>
+  </div>
+
+
+  <!--品牌-->
+  <div class="info">
+    <div class="title">
+      <h4>热门品牌排行</h4>
+    </div>
+    
+    <ul class="mmm_pinpai">
+      <li><a href="javascript:;">
+        平板电视十大品牌
+      </a></li>
+    </ul>
+  </div>
+
+
+</div>
+
+
+<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<script src="../lib/jquery版本/template.js"></script>
+<script src="../javascript/ajax.js"></script>
+<script src="../javascript/headAndFoot.js"></script>
+<script src="../javascript/brandTitle.js"></script>
+
+
+<!--模板-->
+<script type="text/template" id="tmp">
+{{each result v}}
+
+<li>
+  <a href="brand.html?id={{v.brandTitleId}} " data-categoryId="{{v.categoryId}}">
+  {{v.brandTitle}}
+  </a>
+</li>
+  {{/each}}
+</script>
+</body>
+</html>

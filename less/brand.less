@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+//公共部分
+@import "adapter";
+
+/*导航*/
+.mmm_nav{
+  .padding-l(20);
+  .padding-r(20);
+  .H(74);
+  border-bottom:.02rem solid #666;
+  border-top:.02rem solid #666;
+  background-image:linear-gradient(#fff,#ccc) ;
+  color:#000;
+  a{
+    float:left;
+    color:#000;
+    line-height:74/50rem ;
+    height: 100%;
+    font-size: 20/50rem;
+  }
+  button{
+    float:right;
+    .W(80);
+    .H(34);
+    border-radius:.1rem;
+    .margin-t(20);
+    background-image:linear-gradient(#d7d7d7,#f5f5f5) ;
+    box-shadow: 1px 1px 1px 1px #999;
+    cursor: pointer;
+  }
+}
+
+
+/*品牌*/
+.pinpai-info {
+  padding-bottom: 20/50rem;
+  background-color: #fff;
+  .title {
+    padding: 15/50rem 0;
+    background-color: #fff;
+    h4 {
+      padding-left: 10/50rem;
+      color: #874604;
+      line-height: 38/50rem;
+      font-size: 16/50rem;
+      border: 1/50rem solid #ccc;
+      background-color: #eee;
+    }
+  }
+  .pinpai{
+    li{
+      box-sizing: border-box;
+      padding:10/50rem;
+      height: 64/50rem;
+      line-height: 64/50rem;
+      border-bottom:1/50rem solid #ccc;
+      .num{
+        .H(44);
+        span{
+          display: block;
+          .W(20);
+          .H(20);
+          background-color: #ccc;
+          text-align: center;
+          line-height: 20/50rem;
+          color:#fff;
+        }
+      }
+      .jiantou{
+        .H(44);
+        line-height: 44/50rem;
+        font-size: 24/50rem;
+      }
+      .goods-data{
+        overflow: hidden;
+        height:44/50rem;
+        p{
+          padding-left:10/50rem;
+          height: 50%;
+          line-height: 22/50rem;
+          font-size: 14/50rem;
+        }
+        p:first-child{
+          color:#000;
+          font-size: 16/50rem;
+        }
+      }
+    }
+  }
+
+
+}
+.pp-data{
+  //.H(118);
+
+  li{
+    padding:10/50rem;
+    border-bottom: 1/50rem solid #ccc;
+    background-color: #fff;
+  }
+  a{
+    position: relative;
+    display: block;
+    .H(98);
+    .img{
+      img{
+        .W(98);
+        .H(98);
+      }
+    }
+    .pp-info{
+      margin-left:110/50rem;
+      max-width:630/50rem;
+      //background-color: red;
+      .H(98);
+      .data-txt{
+        font-size: 16/50rem;
+        line-height: 20/50rem;
+        min-height: 40/50rem;
+        //background-color:blue;
+        color:#000;
+      };
+      span{
+        display: block;
+        color:red;
+        .H(25);
+        line-height: .5rem;
+        font-size: 18/50rem;
+
+      };
+      p{
+        position:absolute;
+        bottom:0;
+        line-height: 24/50rem;
+        width: 100%;
+        max-width: 620/50rem;
+      }
+    }
+  }
+}
+.xing{
+  .W(90);
+  height: 100%;
+  background:url('../pages/images/star.svg') repeat-x;
+  background-size: 20%;
+  background-position: left center;
+}
+
+
+/*评论*/
+.mmm_com{
+  .title {
+    padding: 15/50rem 0;
+    background-color: #fff;
+    h4 {
+      padding-left: 10/50rem;
+      color: #874604;
+      line-height: 38/50rem;
+      font-size: 16/50rem;
+      border: 1/50rem solid #ccc;
+      background-color: #eee;
+    }
+  }
+}
+
+.product_cm{
+  background-color: #fff;
+  li{
+    padding:10/50rem;
+    .img{
+      .H(105);
+      .W(110);
+      //margin-left:10/50rem;
+    }
+    .content{
+      margin-left:120/50rem;
+      max-width: 610px;
+      //background-color: red;
+      height: 105/50rem;
+    }
+    .protit{
+      margin-bottom:10/50rem;
+    }
+    .plbox{
+      position: relative;
+      &:before{
+        content: '';
+        position:absolute;
+        //.W(8);
+        //.H(8);
+        border-bottom: 8/50rem solid #f8f8f8;
+        border-left: 8/50rem solid transparent;
+        border-right: 8/50rem solid transparent;
+        top:-8/50rem;
+      }
+      border:1/50rem solid #ccc;
+      padding:10/50rem;
+      //.H(100);
+      background-color: #f8f8f8;
+      .name{
+        .H(18);
+        //line-height:18/50rem;
+        vertical-align: text-bottom;
+        span{
+          display: inline-block;
+          height: 100%;
+        }
+      }
+      .con{
+        margin-top:10/50rem;
+        font-size: 15/50rem;
+        color:#000;
+        line-height: 22/50rem;
+      }
+    }
+  }
+}

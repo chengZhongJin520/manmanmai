@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/brand.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<!--版心-->
+<div id="mmm_container">
+  <!--导航-->
+  <div class="mmm_nav clearfix">
+    <a href="index.html">首页 &gt;</a>
+    <a href="category.html">全部分类 &gt;</a>
+  </div>
+  <!--品牌-->
+  <div class="pinpai-info">
+    <div class="title">
+      <h4>品牌电视那个好</h4>
+    </div>
+    <ul class="pinpai">
+      <li>
+        <a href="javascript:;" class="clearfix">
+          <div class="num fl">
+            <span>1</span>
+          </div>
+          <div class="jiantou fr">&gt;</div>
+          <div class="goods-data">
+            <p>三星平板电视</p>
+            <p>30天全网销售：242408件</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+    <div class="title">
+      <h4>平板电视产品销量排行</h4>
+    </div>
+
+  </div>
+  <!--详情-->
+  <ol class='pp-data'>
+    <li>
+      <a href="javascript:;">
+        <div class="img fl">
+          <img src="" alt="">
+        </div>
+
+
+
+        <div class="pp-info">
+          <div class="data-txt">
+            内容
+          </div>
+          <span class="clearfix">￥ <div class="xing fr"></div></span>
+          <p>评论</p>
+        </div>
+      </a>
+    </li>
+  </ol>
+
+  <!--评论-->
+  <div class="mmm_com">
+    <div class="hd">
+      <div class="title">
+        <h4>热门品牌排行</h4>
+      </div>
+    </div>
+    <div class="product_cm">
+      <ul>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<script src="../lib/jquery版本/template.js"></script>
+<script src="../javascript/ajax.js"></script>
+<script src="../javascript/headAndFoot.js"></script>
+<script src="../javascript/brand.js"></script>
+
+
+<!--评论模板-->
+<script type="text/template" id="tmp">
+{{each result as v }}
+
+<li>
+  <a href="javascript:;">
+    <div class="protit clearfix">
+      <div class="img fl">
+        <img src="" alt="">
+      </div>
+
+      <div class="content">
+        内容
+      </div>
+    </div>
+    <div class="plbox">
+      <div class="name">
+        {{v.comName}}<span class='xing'></span>
+
+        <i class='fr'>{{v.comTime}}</i>
+      </div>
+      <div class="con">
+        {{v.comContent}}
+      </div>
+    </div>
+  </a>
+</li>
+  {{/each}}
+</script>
+
+
+
+<!--品牌模板-->
+<script type="text/template" id="tmp-pinpai">
+ {{each result as v i}}
+ <li>
+   <a href="javascript:;" id='{{v.brandId}}'class="clearfix">
+     <div class="num fl">
+       <span class="paiming">{{i+1}}</span>
+     </div>
+     <div class="jiantou fr">&gt;</div>
+     <div class="goods-data">
+       <p>{{v.brandName}}</p>
+       <p>{{v.brandInfo}}</p>
+     </div>
+   </a>
+ </li>
+  {{/each}}
+</script>
+
+
+<!--品牌分类模板-->
+<script type="text/template" id="tmp-pp-data">
+{{each result as v i}}
+<li id='{{v.productId}}'>
+  <a href="javascript:;">
+    <div class="img fl">
+      {{@v.productImg}}
+    </div>
+
+
+
+    <div class="pp-info">
+      <div class="data-txt">
+        {{v.productName}}
+      </div>
+      <span class="clearfix">{{v.productPrice}} <div class="xing fr"></div></span>
+      <p>{{v.productQuote }}  {{v.productCom}}</p>
+    </div>
+  </a>
+</li>
+
+  {{/each}}
+</script>
+
+
+
+</body>
+</html>
