@@ -25,13 +25,17 @@
 </div>
 
 
-<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<!-- <script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
 <script src="../lib/jquery版本/template.js"></script>
 <script src="../javascript/ajax.js"></script>
 <script src="../javascript/headAndFoot.js"></script>
-<script src="../javascript/getsitenav.js"></script>
+<script src="../javascript/getsitenav.js"></script> -->
 
-
+<script src="./node_modules/requirejs/require.js"></script>
+<script src="../javascript/require-url.js"></script>
+<script>
+  require(['getsitenav']);
+</script>
 <!--模板-->
 <script type="text/template" id="tmp">
 {{each result v}}

@@ -49,13 +49,21 @@
 </div>
 
 
-<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<!-- <script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
 <script src="../lib/jquery版本/jquery.cookie.js"></script>
 <script src="../lib/jquery版本/template.js"></script>
 <script src="../javascript/ajax.js"></script>
 <script src="../javascript/headAndFoot.js"></script>
-<script src="../javascript/gsproduct.js"></script>
+<script src="../javascript/gsproduct.js"></script> -->
 
+
+
+
+<script src="./node_modules/requirejs/require.js"></script>
+<script src="../javascript/require-url.js"></script>
+<script>
+  require(['gsproduct']);
+</script>
 
 <!--模板-->
 <script type="text/template" id="tmp"></script>
@@ -80,14 +88,14 @@
 
 <!--导航1模板-->
 <script type="text/template" id="tmp-nav1">
-  {{each result as v i}}
+  {{each result  v i}}
   <li id="{{v.shopId}}">{{v.shopName}} <span></span></li>
 {{/each}}
 </script>
 
 <!--导航2模板-->
 <script type="text/template" id="tmp-nav2">
-    {{each result as v i}}
+    {{each result  v i}}
     <li id="{{v.areaId}}">{{v.areaName}} <span></span></li>
     {{/each}}
 </script>

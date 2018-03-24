@@ -26,15 +26,21 @@
 </div>
 
 
-<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<!-- <script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
 <script src="../lib/jquery版本/template.js"></script>
 <script src="../javascript/ajax.js"></script>
 <script src="../javascript/headAndFoot.js"></script>
-<script src="../javascript/discountproduct.js"></script>
+<script src="../javascript/discountproduct.js"></script> -->
+
+<script src="./node_modules/requirejs/require.js"></script>
+<script src="../javascript/require-url.js"></script>
+<script>
+  require(['discountproduct']);
+</script>
 
 <!--详情模板-->
 <script type="text/template" id="tmp-info">
-{{each list as v}}
+{{each list  v}}
 <div class="goods-info">
   <h3>{{v.productName}}</h3>
   <div class="info" style="color:#ff841d;font-weight: 700;font-size: 0.4rem;">
@@ -67,7 +73,7 @@
 </script>
 <!--评论模板-->
 <script type="text/template" id="tmp-com">
-{{each list as v}}
+{{each list  v}}
   {{@v.productComment}}
   {{/each}}
 

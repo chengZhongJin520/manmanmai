@@ -56,13 +56,17 @@
 </div>
 
 
-<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<!-- <script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
 <script src="../lib/jquery版本/template.js"></script>
 <script src="../javascript/ajax.js"></script>
 <script src="../javascript/headAndFoot.js"></script>
-<script src="../javascript/baicaijia.js"></script>
+<script src="../javascript/baicaijia.js"></script> -->
 
-
+<script src="./node_modules/requirejs/require.js"></script>
+<script src="../javascript/require-url.js"></script>
+<script>
+  require(['baicaijia']);
+</script>
 <!--模板-->
 <!--<script type="text/template" id="tmp"></script>-->
 
@@ -77,7 +81,7 @@
 
 <!--商品模板-->
 <script type="text/template" id="tmp-goods">
-{{each list as v}}
+{{each list  v}}
 <li class='l-good'>
   {{@v.productHref}}
   <div class="box clearfix">

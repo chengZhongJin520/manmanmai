@@ -114,14 +114,29 @@
       <!--</footer>-->
     </div>
   </div>
-
+  <!-- <script src='../lib/jquery版本/jquery-1.12.4.min.js'></script>
+  <script src='../lib/jquery版本/template.js'></script> -->
+  <!-- <script src='../javascript/ajax.js'></script> -->
+  <!-- <script src="../javascript/headAndFoot.js"></script> -->
+  <!-- <script src='../javascript/index.js'></script> -->
   <!--模板-->
+  <script src="./require.js"></script>
 
-  <script src='../lib/jquery版本/jquery-1.12.4.min.js'></script>
-  <script src='../lib/jquery版本/template.js'></script>
-  <script src='../javascript/ajax.js'></script>
-  <script src="../javascript/headAndFoot.js"></script>
-  <script src='../javascript/index.js'></script>
+
+  <script>
+    require.config({
+      baseUrl:'../lib',
+      paths:{
+        jquery:'./jquery版本/jquery-1.12.4.min',
+        template:'./jquery版本/template',
+        Ajax:'../javascript/ajax',
+        headAndFoot:'../javascript/headAndFoot',
+        index:'../javascript/index'
+      }
+    });
+    require(['index']);
+  </script>
+
 
 
 

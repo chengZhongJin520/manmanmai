@@ -1,3 +1,6 @@
+<!-- 模块化 -->
+
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -16,12 +19,20 @@
   </div>
 </div>
 
-<script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
+<!-- <script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
 <script src="../lib/jquery版本/jquery.cookie.js"></script>
 <script src="../lib/jquery版本/template.js"></script>
 <script src="../javascript/ajax.js"></script>
-<script src="../javascript/headAndFoot.js"></script>
-<script src="../javascript/moneyctrl.js"></script>
+<script src="../javascript/headAndFoot.js"></script> -->
+<!-- <script src="../javascript/moneyctrl.js"></script> -->
+
+
+
+<script src="./node_modules/requirejs/require.js"></script>
+<script src="../javascript/require-url.js"></script>
+<script>
+  require(['moneyctrl']);
+</script>
 <!--折扣商品模板-->
 <script id='goods-tmp' type='text/template'>
   {{each list  v}}

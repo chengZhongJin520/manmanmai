@@ -2,15 +2,22 @@
  * Created by Lenovo on 2018/2/24.
  */
 
-$(function(){
-  set();
+// $(function(){
+  
+
+// })
+
+
+define(['jquery','template','Ajax','headAndFoot'], function($,template,Ajax,headAndFoot) {
+// console.log(headAndFoot);
+  headAndFoot
+  .set();
   //导航菜单
-  Ajax({
+  Ajax.Ajax({
     str:'getindexmenu',
     collback:function(data){
+      console.log(data);
       $('.mmm_top_nav ul').html(template('nav-tmp', {list: data.result}));
-
-
     }
   });
 
@@ -21,7 +28,7 @@ $(function(){
  })
 
   //折扣商品
-  Ajax(
+  Ajax.Ajax(
     {
       str:'getmoneyctrl',
     collback:function(data){
@@ -29,5 +36,4 @@ $(function(){
     }
   })
   //$.fn.Ajax(true);
-
-})
+});

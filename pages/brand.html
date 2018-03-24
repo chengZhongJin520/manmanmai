@@ -79,17 +79,23 @@
   </div>
 </div>
 
-
+<!-- 
 <script src="../lib/jquery版本/jquery-1.12.4.min.js"></script>
 <script src="../lib/jquery版本/template.js"></script>
 <script src="../javascript/ajax.js"></script>
 <script src="../javascript/headAndFoot.js"></script>
-<script src="../javascript/brand.js"></script>
+<script src="../javascript/brand.js"></script> -->
 
+
+<script src="./node_modules/requirejs/require.js"></script>
+<script src="../javascript/require-url.js"></script>
+<script>
+  require(['brand']);
+</script>
 
 <!--评论模板-->
 <script type="text/template" id="tmp">
-{{each result as v }}
+{{each result  v }}
 
 <li>
   <a href="javascript:;">
@@ -121,7 +127,7 @@
 
 <!--品牌模板-->
 <script type="text/template" id="tmp-pinpai">
- {{each result as v i}}
+ {{each result  v i}}
  <li>
    <a href="javascript:;" id='{{v.brandId}}'class="clearfix">
      <div class="num fl">
@@ -140,7 +146,7 @@
 
 <!--品牌分类模板-->
 <script type="text/template" id="tmp-pp-data">
-{{each result as v i}}
+{{each result v i}}
 <li id='{{v.productId}}'>
   <a href="javascript:;">
     <div class="img fl">
